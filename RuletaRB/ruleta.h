@@ -13,13 +13,13 @@ private:
     
 public:
     Ruleta() {
-	seed = chrono::system_clock::now().time_since_epoch().count();
-	gen = mt19937(seed);
-	uny = uniform_int_distribution<int>(0,36);
+        seed = chrono::system_clock::now().time_since_epoch().count();
+        gen = mt19937(seed);
+        uny = uniform_int_distribution<int>(0,36);
     }
     
     int operator()() {
-	return uny(gen);
+        return uny(gen);
     }
 };
 

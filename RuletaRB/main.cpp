@@ -5,6 +5,6 @@ using namespace std;
 int main() {
     Ruleta ruleta;
     for (int i = 0 ; i < 10; i++)
-	cout << ruleta() << " ";
+        cout << ruleta() << " ";
     cout << endl;
 }
