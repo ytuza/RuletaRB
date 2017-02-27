@@ -1,18 +1,10 @@
 #include <iostream>
-#include <random>
-#include <chrono>
-
+#include "ruleta.h"
 using namespace std;
 
-int main()
-{
-    int i =0;
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-    mt19937 gen(seed);
-    uniform_int_distribution<int> uny(0,35);
-
-    for(i;i<10;i++){
-        cout << uny(gen) << endl;
-    }
-    return 0;
+int main() {
+    Ruleta ruleta;
+    for (int i = 0 ; i < 10; i++)
+	cout << ruleta() << " ";
+    cout << endl;
 }
